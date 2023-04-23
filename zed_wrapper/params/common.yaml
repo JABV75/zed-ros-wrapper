@@ -23,11 +23,8 @@ general:
     camera_name:                zed                             # A name for the camera (can be different from camera model and node name and can be overwritten by the launch file)
     zed_id:                     0
     serial_number:              0
-<<<<<<< HEAD
     resolution:                 1                               # '0': HD2K, '1': HD1080, '2': HD720, '3': VGA
     grab_frame_rate:            15                              # Frequency of frame grabbing for internal SDK operations
-=======
->>>>>>> ab7307bca176ee621e19d2402959a276af2b7caf
     gpu_id:                     -1
     base_frame:                 'base_link'                     # must be equal to the frame_id used in the URDF file
     verbose:                    false                           # Enable info message by the ZED SDK
@@ -39,26 +36,16 @@ video:
     img_downsample_factor:      0.5                             # Resample factor for images [0.01,1.0] The SDK works with native image sizes, but publishes rescaled image.
 
 depth:
-<<<<<<< HEAD
     quality:                    4                               # '0': NONE, '1': PERFORMANCE, '2': QUALITY, '3': ULTRA, '4': NEURAL
     sensing_mode:               0                               # '0': STANDARD, '1': FILL (not use FILL for robotic applications)
-=======
-    quality:                    3                               # '0': NONE, '1': PERFORMANCE, '2': QUALITY, '3': ULTRA, '4': NEURAL
->>>>>>> ab7307bca176ee621e19d2402959a276af2b7caf
     depth_stabilization:        1                               # `0`: disabled, `1`: enabled
     openni_depth_mode:          false                           # 'false': 32bit float meters, 'true': 16bit uchar millimeters
     depth_downsample_factor:    0.5                             # Resample factor for depth data matrices [0.01,1.0] The SDK works with native data sizes, but publishes rescaled matrices (depth map, point cloud, ...)
 
 pos_tracking:
     pos_tracking_enabled:       true                            # True to enable positional tracking from start
-<<<<<<< HEAD
     publish_tf:                 false                            # publish `odom -> base_link` TF
     publish_map_tf:             false                            # publish `map -> odom` TF
-=======
-    imu_fusion:                 true                            # enable/disable IMU fusion. When set to false, only the optical odometry will be used.
-    publish_tf:                 true                            # publish `odom -> base_link` TF
-    publish_map_tf:             true                            # publish `map -> odom` TF
->>>>>>> ab7307bca176ee621e19d2402959a276af2b7caf
     map_frame:                  'map'                           # main frame
     odometry_frame:             'odom'                          # odometry frame
     area_memory_db_path:        'zed_area_memory.area'          # file loaded when the node starts to restore the "known visual features" map. 
